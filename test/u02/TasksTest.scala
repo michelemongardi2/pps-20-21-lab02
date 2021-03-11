@@ -2,7 +2,7 @@ package u02
 
 import org.junit.jupiter.api.Assertions.{assertEquals, assertFalse, assertTrue}
 import org.junit.jupiter.api.Test
-import u02.Tasks2a.{empty, emptyLambda, notEmpty, notEmptyMethod, parity, parityMethod}
+import u02.Tasks2a._
 
 class TasksTest {
 
@@ -37,6 +37,14 @@ class TasksTest {
   def testNotEmptyMethods(){
     assertFalse(notEmptyMethod(""))
     assertTrue(notEmptyMethod("b"))
+  }
+
+  @Test
+  def testNegGenericMethods(){
+    assertTrue(greaterThanZero(10))
+    assertFalse(greaterThanZero(-5))
+    assertTrue(negGenericMethod(greaterThanZero)(-5))
+    assertFalse(negGenericMethod(greaterThanZero)(10))
   }
 
 }
