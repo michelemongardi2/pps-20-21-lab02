@@ -1,10 +1,10 @@
-package u02
+package u02.lab2
 
 import org.junit.jupiter.api.Assertions.{assertEquals, assertFalse, assertTrue}
 import org.junit.jupiter.api.Test
-import u02.Tasks2a._
+import u02.lab2.Tasks2a._
 
-class TasksTest {
+class Tasks2aTest {
 
   @Test
   def testEven(){
@@ -46,5 +46,4 @@ class TasksTest {
     assertTrue(negGenericMethod(greaterThanZero)(-5))
     assertFalse(negGenericMethod(greaterThanZero)(10))
   }
-
 }
